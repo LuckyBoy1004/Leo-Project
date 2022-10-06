@@ -1,0 +1,444 @@
+header nav ul li a {
+  /* letter-spacing: 0.5px; */
+}
+
+header.mobile nav ul li a {
+  /* letter-spacing: inherit; */
+}
+
+header nav ul li a:hover,
+header nav ul li a:focus {
+  color: rgba(245, 192, 67) !important;
+  text-decoration: none !important;
+}
+
+header.mobile nav ul span {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+header.mobile nav {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.2s;
+  left: 0;
+  background-color: rgb(253, 253, 253);
+  top: 0px;
+  text-align: left;
+  z-index: 6;
+  height: 100%;
+  overflow: auto;
+  padding-bottom: 96px;
+}
+
+header.mobile .burgerMenuContainer button {
+  border: none;
+  padding: 0;
+}
+
+header.mobile nav.active {
+  left: 0;
+}
+
+header.mobile ul li {
+  display: block;
+}
+
+.burgerMenuContainer {
+  text-align: right;
+  z-index: 99;
+}
+
+.burgerMenuContainer img {
+  width: 50px;
+  cursor: pointer;
+}
+
+header.mobile ul li.active a::after,
+header.mobile ul li:hover a::after,
+header.mobile ul li a::after {
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 0;
+  height: 0;
+  background-color: none;
+  content: "";
+  border-bottom: none;
+  transform: none;
+  position: absolute;
+  transform: none;
+  transition: none;
+}
+
+.footer {
+  z-index: 99;
+  width: 100%;
+  background-color: rgb(38, 38, 38);
+  padding: 10px 5%;
+  text-align: left;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.mobilefooter{  
+  position : absolute;
+  bottom: 0px;
+  width: 100%;
+  /* height: 8% !important; */
+  background-color: rgb(245, 192,67) !important;
+  z-index: 99;
+  padding: 20px 5%;
+  text-align: center;
+  color: white;
+  /* display: flex; */
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.linkfootersignup {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 600;
+}
+
+.noAccountfooter {
+  margin-block-start: unset;
+  padding-bottom: 10px;
+  margin-block-end: unset;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.footer .column {
+  padding: 20px 30px;
+}
+
+.loginPopup_background {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  background-color: rgba(44, 44, 44, 0.438);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loginPopup {
+  position: absolute;
+  background-color: white;
+  min-width: 500px;
+  top: 25%;
+  z-index: 9999;
+  border-radius: 10px;
+  padding: 25px 0 50px;
+  box-shadow: 1px 1px 12px rgb(122, 122, 122);
+}
+
+.loginPopup h1 {
+  font-family: "Roboto-medium";
+}
+
+header.mobile .loginPopup_background {
+background-color: transparent;
+}
+
+header.mobile .loginPopup {
+  width: 100%;
+  min-width: 0;
+  box-shadow: none;
+  border-radius: 0;
+  text-align: center;
+  top: 96px;
+  height: 100%;
+  padding: 0 10%
+}
+
+header.mobile .loginPopup > h1 {
+  font-size: 30px
+}
+
+.header_button_login {
+  position: absolute;
+  right: 100px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  z-index: 9999;
+}
+
+.header_button_login > button {
+  z-index: 9999;
+  border: none;
+  box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
+  border-radius: 7px;
+}
+
+.header_button_login > button.onHover {
+  border-radius: 5px 5px 0 0;
+}
+
+header.mobile .header_button_login > button.onHover {
+  border-radius: 5px;
+}
+
+header.mobile .header_button_login {
+  position: relative;
+  right: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 10%
+}
+
+header.mobile .header_button_login > button {
+width: 100%;
+}
+
+header.mobile button {
+  padding: 15px 30px;
+  font-size: 15px;
+  font-family: "roboto-medium";
+  margin-top: 15px;
+}
+
+
+
+.loginPopup .loginChoose {
+  display: flex;
+  margin-top: 45px;
+}
+
+header.mobile .loginPopup .loginChoose {
+  display: block;
+  margin-top: 0;
+}
+
+.loginChoose > div {
+  padding: 20px 25px 45px;
+  flex: 1 1;
+}
+
+header.mobile .loginPopup .loginChoose > div {
+  padding: 20px 25px 25px;
+  border: none;
+}
+
+.loginChoose > div:nth-child(1) {
+  border-right: 1px solid rgb(196, 196, 196);
+}
+
+.loginChoose button {
+  margin-top: 15px;
+}
+
+@media all and (max-width: 1300px) {
+  .footer .column.logo {
+    width: 100% !important;
+    text-align: center;
+  }
+
+  .chooseheader{
+    display:none;
+  }
+
+  .loginPopup h1 {
+    font-size:20px;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .footer .column {
+    width: 100% !important;
+    text-align: center;
+  }
+
+
+  .header.mobile nav {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.2s;
+  left: 0;
+  background-color: rgb(253, 253, 253);
+  top: 0px;
+  text-align: left;
+  z-index: 9998;
+  height: 100%;
+  overflow: auto;
+  padding-bottom: 96px;
+  }
+
+  .loginChoose p {
+    margin: 0;
+  }
+
+  .margintopbutton {
+    margin-top: 160px!important;
+  }
+}
+
+.footer .logo img {
+  width: 100px;
+  /* filter: invert(100); */
+  cursor: pointer;
+}
+
+.footer .column ul {
+  margin: 0;
+  padding: 0;
+}
+
+.footer .column ul li {
+  list-style: none;
+  line-height: 35px;
+  font-size: 17px;
+  cursor: pointer;
+  color: #d2d2d2;
+}
+
+.footer .column ul li:hover {
+  color: #ffffff;
+  transition: all .2s;
+}
+
+.footer h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: "Roboto-medium";
+  font-size: 21px;
+}
+
+.footer .column p {
+  margin: 0;
+  font-size: 17px;
+  color: #e9e9e9;
+}
+
+.footer .column span {
+  display: block;
+  font-size: 17px;
+  font-family: "roboto-bold";
+  font-size: 20px;
+}
+
+.footer .newsletter input {
+  background-color: transparent;
+  color: white;
+  border: 0;
+  border-bottom: 1px solid white;
+  padding: 10px 38px 10px 0;
+  min-width: 200px;
+  font-size: 18px;
+}
+
+.footer.mobile .newsletter input {
+  padding: 10px 0;
+  width: 100%;
+}
+
+.footer.mobile .inputContainerNewsletter {
+  width: auto;
+}
+
+.arrowRight {
+  width: 30px;
+  height: 3px;
+  border-radius: 4px;
+  background-color: white;
+  position: absolute;
+  right: 0;
+  top: 23px;
+}
+
+.arrowRight::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 3px;
+  border-radius: 4px;
+  background-color: white;
+  transform: rotate(45deg);
+  position: absolute;
+  right: -1px;
+  bottom: 3px;
+}
+
+.arrowRight::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 3px;
+  border-radius: 4px;
+  background-color: white;
+  transform: rotate(-45deg);
+  position: absolute;
+  right: -1px;
+  top: 3px;
+}
+
+.inputContainerNewsletter {
+  position: relative;
+}
+.arrowRightContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  width: 30px;
+  height: 40px;
+}
+
+.header_button_login .subMenu {
+  background: white;
+  padding: 15px;
+  box-shadow: 1px 3px 12px 1px rgba(122, 122, 122, 0.233);
+  border-radius: 0 0 10px 10px;
+}
+
+.subMenu a {
+  padding: 0;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s;
+}
+
+.subMenu a:hover {
+  color: rgba(245, 192, 67);
+}
+
+header ul li img {
+  width: 23px;
+  margin: 0 13px 13px;
+  cursor: pointer;
+  filter: invert(0.5);
+  transition: all 0.3s;
+}
+
+header ul li img:hover {
+  filter: inherit;
+}
+
+header.mobile nav ul li.socialNetwork {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+header.mobile nav ul li.socialNetwork span {
+  display: block;
+  width: auto;
+  border-bottom: none;
+  font-family: 'Roboto-bold';
+  color: #bfbfbf;
+  cursor: pointer;
+
+}

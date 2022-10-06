@@ -1,0 +1,550 @@
+.loginSubscribeContainer {
+  background-image: url("../images/SubBackground.jpeg");
+  background-size: cover;
+  min-height: 100vh;
+  /* height: 92%; */
+  background-position: center;
+  /* padding-bottom: 50px; */
+}
+
+.logoContainer {
+  width: 120px;
+  min-width: 120px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.logoContainer.mobile {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 15px 0;
+}
+
+.logoContainer img {
+  width: 100%;
+}
+
+.logoContainer.mobile img.logo {
+  width: 100px;
+  height: auto;
+}
+
+.blocLoginTopRight {
+  position: absolute;
+  top: 40px;
+  right: 5%;
+  text-align: right;
+}
+
+.blocLoginTopRight p {
+  margin: 0;
+  font-family: "Roboto-medium";
+}
+
+.blocLoginTopRight a {
+  margin: 0;
+  color: inherit;
+  text-decoration: none;
+  font-family: "Roboto-bold";
+}
+
+.subscribeContainer {
+  max-width: 520px;
+  margin: 0;
+  padding: 0 8%;
+  justify-content: center;
+}
+
+.subscribeContainer h1,
+.loginContainer h1 {
+  font-family: "roboto-bold";
+  margin-top: 0;
+}
+
+.subscribeContainer h1 {
+  margin-bottom: 0;
+}
+
+.loginContainer {
+  margin: 0;
+  width: 400px;
+}
+
+.subscribeContainer form {
+  margin: 0;
+  text-align: left;
+}
+
+.loginContainer form {
+  margin: 40px 0 0;
+  text-align: left;
+}
+
+.formLine {
+  display: flex;
+  margin-bottom: 20px;
+  transition: 0.6s;
+}
+
+.inputview {
+  /* margin-top: 20%; */
+  margin-bottom: 30%;
+  height: 20% !important;
+}
+.formLine.mobile {
+  display: inherit;
+}
+
+.formLine.mobile .formField {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.formField {
+  display: inline-block;
+  flex: auto;
+  margin: 0 10px;
+}
+
+.formField.withoutMargin {
+  margin: 0;
+}
+
+.formField label {
+  display: flex;
+  font-weight: 700;
+  padding-bottom: 3px;
+  font-size: 17px;
+  justify-content: space-between;
+}
+
+.formField select option {
+  background-color: white;
+}
+
+.formField input[type="text"],
+.formField input[type="email"],
+.formField input[type="password"],
+.formField input[type="tel"],
+.formField select {
+  width: 100%;
+  padding: 12px 10px;
+  border-radius: 10px;
+  box-shadow: none;
+  border: 3px solid transparent;
+  background-color: rgba(233, 233, 233);
+  transition: all 0.3s;
+  font-size: 16px;
+}
+
+.formField input[type="text"]:focus,
+.formField input[type="email"]:focus,
+.formField input[type="password"]:focus,
+.formField input[type="tel"]:focus,
+.formField select:focus {
+  background-color: white;
+  border: 3px solid rgba(245, 192, 67);
+  border-radius: 10px;
+}
+
+.nameEventInput {
+  font-size: 20px;
+  font-family: "roboto-regular";
+}
+
+.formField p {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-weight: 600;
+}
+
+.noaccount {
+  margin-bottom: 5px!important;
+}
+
+.subscribetext {
+  font-weight: 700;
+    color: #f5bf43;
+    font-family: "roboto-medium";
+    text-decoration: unset;
+    margin-top: 5px;
+    transition:all ease 0.4s;
+}
+
+.subscribetext {
+    color: #e1aa2c;
+}
+
+.formField a {
+  color: inherit;
+  font-weight: 700;
+}
+
+.formField input[type="submit"]:hover {
+  background-color: rgb(219, 170, 56);
+}
+
+.LoginDiviserContainer {
+  margin: 25px 0 10px;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  height: 2px;
+  background: linear-gradient(
+    0.25turn,
+    #e7e7e7 46%,
+    transparent 46%,
+    transparent 54%,
+    #e7e7e7 54%
+  );
+}
+
+.LoginDiviser {
+  position: absolute;
+  width: 100%;
+  top: -11px;
+}
+
+.LoginDiviser p {
+  margin: 0;
+  background-color: transparent;
+  display: inline;
+  padding: 0 10px;
+  font-weight: 700;
+}
+
+.LoginBackLink {
+  padding-top: 23px;
+  padding-bottom: 15px;
+}
+
+.formsignin {
+top:40%;
+right:0;
+left: 0;
+padding: 0px 40px;}
+
+.LoginBackLink a {
+  color: black;
+  font-style: none;
+  text-decoration: none;
+  font-family: "roboto-bold";
+}
+
+.errorMessage {
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 0 0 15px;
+  color: rgb(233, 0, 0) !important;
+  margin: 0;
+  font-family: "roboto-medium";
+}
+
+.conditionsGenerales {
+  margin-top: 10px;
+}
+
+.loginSubscribeContainer.mobile header {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginSubscribeContainer.mobile .logoContainer,
+.loginSubscribeContainer.mobile .blocLoginTopRight {
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.loginSubscribeContainer.mobile .loginContainer {
+  margin: 80px auto 0;
+}
+
+.loginSubscribeContainer.mobile .logoContainer img {
+  width: 120px;
+}
+
+.formField.error input {
+  border: 3px solid rgb(250, 0, 0);
+}
+
+.loginSubscribeContainer.mobile .subscribeContainer {
+  margin: 80px auto 0;
+}
+
+.loginSubscribeContainer.mobile .subscribeContainer .formLine {
+  margin: 0;
+  display: block;
+}
+
+.loginSubscribeContainer.mobile .subscribeContainer .formField {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.loginSubscribeContainer.mobile .subscribeContainer .formFieldSpecialDate {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.loginSubscribeContainer .formField label span {
+  align-self: right;
+  font-family: "roboto-regular";
+  font-weight: normal;
+  cursor: pointer;
+  transition: color 0.4s;
+  color: #f5c043;
+  font-size: 17px;
+  font-family: "roboto-bold";
+}
+
+.loginSubscribeContainer .formField label span:hover {
+  color: black;
+}
+
+.backFromForgetPassword {
+  color: black;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: "roboto-medium";
+}
+
+.backFromForgetPassword:hover {
+  color: #f5c043;
+}
+
+.etape1DatePicker.subscribe {
+  background-color: rgba(233, 233, 233);
+  color: black;
+}
+
+.etape1DatePicker.subscribe:hover {
+  background-color: rgb(212, 212, 212);
+}
+
+.loginBottomBloc {
+  text-align: center;
+}
+
+.blocLoginTopRight img {
+  width: 20px;
+  margin-right: 6px;
+  vertical-align: middle;
+  margin-top: -2px;
+}
+
+.googleSignInContainer {
+  margin: 0 10px;
+}
+
+.loginbuttoncontainer {
+  margin-top:25px;
+  margin-bottom:25px;
+}
+
+.googleSignInButton {
+  /* background-color: rgb(66, 133, 244); */
+  color: black;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+  border: 2px solid #dadada;
+  transition: all 0.2s;
+  margin-top: 15px;
+}
+
+.googleSignInButtonImageContainer {
+  width: 45px;
+  height: 45px;
+  float: left;
+  border-radius: 2px;
+  padding: 10px 13px;
+}
+
+.googleSignInButton img {
+  width: 25px;
+}
+
+.googleSignInButton span {
+  margin: 0;
+  padding: 13px 0 0;
+  display: inline-block;
+}
+
+.googleSignInButton:hover {
+  background-color:#f4f4f4;
+}
+
+.loginPageContainer {
+  display: flex;
+  padding: 0 5%;
+  margin: calc((100vh - 540px) / 2) auto 0;
+  justify-content: center;
+}
+
+.loginPageContainer.mobile {
+  margin: 50px auto 0;
+  display: block;
+}
+
+.subscribePageContainer {
+  display: flex;
+  padding: 0.5%;
+  margin: calc((100vh - 540px) / 2) auto 0;;
+  justify-content: center;
+}
+
+/* .subscribePageContainer.moblie {
+  margin: 50px 0px;
+  display: block;
+  padding: 0 5%;
+} */
+
+.marketingBlocForm {
+  width: 420px;
+  background-color: transparent;
+  border-radius: 10px;
+  margin-right: 40px;
+  padding: 20px 25px;
+  font-family: "roboto-bold";
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.marketingItem {
+  margin: 0 0 40px;
+}
+
+.marketingItem h2 {
+  font-family: "roboto-bold";
+  margin: 0 0 20px;
+  font-size: 35px;
+  color: #f5c043;
+  line-height: 38px;
+}
+
+.marketingItem h3 {
+  font-family: "roboto-medium";
+  margin: 0 0 20px;
+  color: #f5c043;
+  font-size: 35px;
+  line-height: 40px;
+}
+
+.marketingItem p {
+  margin: 0;
+}
+
+.bottomSubscribeContainer {
+  padding-bottom: 20px;
+}
+
+.bottomSubscribeContainer button {
+  padding: 9px 75px;
+}
+
+.passwordForget_container {
+  min-height: 100vh;
+}
+
+.passwordForget {
+  min-height: 100vh;
+  display: flex;
+  margin-top: -110px;
+}
+
+.passwordForget_left {
+  flex: 1;
+  background-image: url("../images/passwordleft.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+.passwordForget_right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.passwordForget_form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.passwordForget_form form {
+  margin-bottom: 50px;
+}
+
+.passwordForget_form h1 {
+  font-family: "roboto-medium";
+  font-size: 45px;
+  margin-bottom: 80px;
+}
+
+.passwordForget_form h2 {
+  font-family: "roboto-medium";
+  margin-bottom: 55px!important;
+}
+
+.passwordForget_form img {
+  margin-bottom: 15px;
+}
+
+.passwordForget_form_bottom p {
+  margin-bottom: 5px;
+}
+
+.passwordForget_form_bottom a {
+  color: #000;
+  font-family: "roboto-medium";
+}
+
+.ConfirmSubscribe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.ConfirmSubscribe img {
+  margin-bottom: 15px;
+}
+
+@media all and (max-width: 1100px) {
+  .passwordForget_right {
+    padding: 0 15px;
+  }
+
+  .logoContainer {
+    width: 90px;
+    min-width: 90px;
+    position: relative;
+    top: 5px;
+    left: 15px;
+    z-index: 99;
+  }
+ 
+  .formsignin {
+  position: absolute;
+    opacity: 1;
+    z-index: 1;
+    transition: all 0.5s ease 0s;
+  }
+
+  .passwordForget_form h1 {
+    font-size: 40px;
+  }
+}

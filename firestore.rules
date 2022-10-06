@@ -1,0 +1,163 @@
+rules_version = '2';
+
+service cloud.firestore {
+
+  match /databases/{database}/documents {
+
+    
+
+    match /sellers/{seller} {
+
+      allow read: if true;
+
+      allow create: if isLoggedIn() && (isValidRequest() || isAdmin());
+
+      allow update: if isLoggedIn() && (isValidRequest() || isAdmin());
+
+      allow delete: if isLoggedIn() && (isValidRequest() || isAdmin());
+
+      
+
+      match /services/{serviceID} {
+
+        allow read: if isLoggedIn();
+
+        allow create: if isLoggedIn() || isAdmin();
+
+        allow update: if isLoggedIn() || isAdmin();
+
+        allow delete: if isLoggedIn() || isAdmin();
+
+      }
+
+      
+
+      match /views/{view} {
+
+        allow read: if isLoggedIn();
+
+        allow create: if isLoggedIn();
+
+        allow update: if isLoggedIn();
+
+        allow delete: if isLoggedIn();
+
+      }
+
+      
+
+      match /referral/{referral} {
+
+        allow read: if isLoggedIn();
+
+        allow create: if isLoggedIn();
+
+        allow update: if isLoggedIn();
+
+        allow update: if isLoggedIn();
+
+        allow update: if isLoggedIn();
+
+        allow delete: if isLoggedIn();
+
+      }
+
+      
+
+      match /reviews/{reviews} {
+
+        allow read: if isLoggedIn();
+
+        allow create: if isLoggedIn();
+
+        allow update: if isLoggedIn();
+
+        allow delete: if isLoggedIn();
+
+      }
+
+    }
+
+    
+
+    match /sales/{saleID} {
+
+      allow read: if isLoggedIn();
+
+      allow create: if isLoggedIn() || isAdmin();
+
+      allow update: if isLoggedIn() || isAdmin();
+
+      allow delete: if isAdmin();
+
+    }
+
+    
+
+    match /users/{userID} {
+
+      allow read: if true;
+
+      allow create: if isLoggedIn() && isValidRequest();
+
+      allow update: if isLoggedIn() && (isValidRequest() || isAdmin());
+
+      allow delete: if isLoggedIn() && isAdmin();
+
+    }
+
+    
+
+    match /events/{eventID} {
+
+      allow read: if isLoggedIn();
+
+      allow create: if isLoggedIn();
+
+      allow update: if isLoggedIn() || isAdmin();
+
+      allow delete: if isLoggedIn() && isAdmin();
+
+      
+
+      match /services/{serviceID} {
+
+        allow read: if isAdmin() || isLoggedIn();
+
+        allow create: if isLoggedIn();
+
+        allow update: if isLoggedIn();
+
+        allow delete: if isAdmin() || isLoggedIn();
+
+      }
+
+    }
+
+  }
+
+  
+
+  function isLoggedIn() {
+
+  	return request.auth != null;
+
+  }
+
+  
+
+  function isValidRequest() {
+
+  	return request.resource.id == request.auth.uid;
+
+  }
+
+  
+
+  function isAdmin() {
+
+  	return request.auth.token.email == "chassereauxremi@gmail.com" || request.auth.token.email == "ricard.leo@me.com" || request.auth.token.email == "Yohann@nivid.fr" || request.auth.token.email == "Tracy@nivid.fr" || request.auth.token.email == "christelle.var@knockin.fr";
+
+  }
+
+}

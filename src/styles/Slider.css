@@ -1,0 +1,127 @@
+.rec.rec-arrow {
+    display:none;
+}
+
+.rec.rec-dot {
+    display:none;
+}
+
+.insetRightSide .rec.rec-item-wrapper {
+    width:210px!important;
+}
+
+.insetRightSide .rec.rec-swipable {
+    margin-left:-10px
+}
+
+.itemPrestataireDashboard {
+    margin-right: 25px;
+    border-radius: 10px;
+    position: relative;
+    min-width: 190px;
+    background-image: url("../images/CARREMENT-FLEUR-FLEURISTE-FRANCHISE-BOUTIQUE-MAGASIN__7_.png");
+    background-size: cover;
+    height: 280px;
+    overflow: hidden;
+    transition: all .1s
+}
+
+.itemPrestataireDashboard::before {  
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, transparent 60%,rgba(0, 0, 0, 0.753) 100%);
+}
+
+.itemPrestataireDashboard.clickable {
+    cursor:pointer
+}
+
+.itemPrestataireDashboard.clickable:hover {
+  border: 6px solid rgb(245, 192, 67)
+}
+
+
+.itemPrestataireDashboard span.bottom {
+    padding: 0 15px;
+    position: absolute;
+    bottom:10px;
+    color:white;
+    left:0;
+}
+
+.itemPrestataireDashboard span.top {
+    position: absolute;
+    top:0px;
+    color:white;
+    left:0;
+    right: 0;
+    text-align: center;
+}
+
+.itemPrestataireDashboard span.top p {
+    font-size: 14px;
+    padding: 4px 0;
+}
+
+
+.itemPrestataireDashboard span p{
+    margin:0
+}
+
+.itemPrestataireDashboard span.bottom p:nth-of-type(1n) {
+    font-family: "roboto-medium";
+    font-size: 17px;
+    line-height: 17px;
+    word-break: break-all;
+}
+
+.itemPrestataireDashboard span.bottom p:nth-of-type(2n) {
+    font-size: 15px;
+    margin-top: 3px;
+    font-family: "roboto-regular"
+}
+
+.validPrestation {
+    background-color: rgb(115, 212, 149)
+}
+
+.checkingPrestation {
+    background-color: rgb(82, 96, 205);
+}
+
+.itemPrestataireDashboard.mobile {
+    min-width: 325px;
+    width: 325px;
+    height: 500px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.dashboard.mobile .buttonDuoDashboard {
+    position: relative;
+    bottom:0;
+    right:0;
+    margin-top: 15px;
+}
+
+.buttonDuoDashboard.mobile {
+}
+
+.buttonDuoDashboard.mobile button {
+display: block;
+width: 100%;
+padding: 17px;
+margin: 0 auto 20px;
+font-size: 18px;
+border-radius: 10px;
+max-width: 600px;
+}
+
+
+.buttonDuoDashboard.mobile button:nth-of-type(2n) {
+    margin: 0 auto;
+}

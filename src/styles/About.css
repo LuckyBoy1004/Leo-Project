@@ -1,0 +1,297 @@
+.about {
+    margin-bottom: 80px;
+}
+
+.about_header h1 {
+  font-family: "Roboto-Bold";
+  font-size: 40px;
+  margin-bottom: 75px;
+}
+
+.about_header h1 span {
+  color: rgb(245, 192, 67);
+  font-family: "Roboto-Bold";
+}
+
+.bottomabout h1 {
+  font-family: "Roboto-Bold";
+  font-size: 40px;
+  margin-bottom: 75px;
+}
+
+.bottomabout h1 span {
+  color: rgb(245, 192, 67);
+  font-family: "Roboto-Bold";
+}
+
+.rightabout {
+  text-align: left;
+  margin-left: 20px;
+  width: 60%;
+}
+
+.rightabout span {
+  color: rgb(245, 192, 67);
+  font-family: "Roboto-medium";
+}
+
+.leftabout {
+  font-family: "roboto-light";
+    font-size: 90px;
+    color: #F7C042;
+    line-height: 80px;
+}
+
+.about_header h1 span.surligne {
+  color: inherit;
+  background-color: rgb(245, 192, 67);
+  border-radius: 35px;
+  font-family: "Roboto-Bold";
+}
+
+.about_header_images {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 75px;
+}
+
+.about_header_images .images_container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.about_header_images .images_container .item {
+  box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+  border-radius:6px;
+}
+
+.left {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.afterleft {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.center {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.afterright {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.one {
+  width: 230px;
+  height: 210px;
+  background-image: url(../images/AdobeStock_426636063.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.two {
+  background-image: url(../images/AdobeStock_200877704.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 228px;
+  height: 133px;
+}
+
+.three {
+  background-image: url(../images/AdobeStock_292777021.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top:10px;
+  width: 230px;
+  height: 205px;
+}
+
+.four {
+  background-image: url(../images/AdobeStock_304886685.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 230px;
+    height: 448px;
+}
+
+.five {
+  background-image: url(../images/AdobeStock_129995716.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 230px;
+  height: 205px;
+}
+
+.six {
+  background-image: url(../images/AdobeStock_143838107.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 228px;
+  height: 133px;
+  margin-top: 10px;
+}
+
+.seven {
+  background-image: url(../images/AdobeStock_409822148.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 230px;
+  height: 210px;
+}
+
+.about_header_images .images_container .item:nth-child(even) {
+}
+
+.about_content {
+    padding: 0 5%;
+    text-align: left;
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-bottom: 75px;
+}
+
+.about_content .item {
+    position: relative;
+    text-align:center;
+    margin-bottom: 40px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about_content .item > span {
+    position: absolute;
+    left:0;
+    top:0;
+    font-size: 100px;
+    font-family: Roboto-bold;
+    color: rgba(245, 192, 67, .4);
+}
+
+
+/* .about_content .item p {
+    padding-left: 180px;
+} */
+
+.about_content .item p:nth-of-type(1) {
+    /* padding-top: 50px; */
+}
+
+.about_bottom h2 {
+    color: black;
+    font-family: Roboto-medium;
+}
+
+@media all and (max-width: 700px) {
+
+
+  .about_header h1 {
+    font-family: "Roboto-Bold";
+    font-size: 30px;
+    margin-top: 50px;
+    padding: 0px 40px;
+    margin-bottom: 30px;
+}
+
+.about_bottom {
+  padding: 0px 40px;
+}
+
+.rightabout p br {
+  display:none;
+}
+
+.rightabout {
+  text-align: center;
+  margin-left: unset;
+  width: 80%;
+}
+
+.leftabout br {
+  display:none;
+}
+
+.bottomabout h1 {
+  font-family: "Roboto-Bold";
+    font-size: 40px;
+    margin-top: 50px;
+    padding: 0px 40px;
+    margin-bottom: 75px;
+}
+
+  .one {
+    display:none;
+  }
+  
+  .two {
+    background-image: url(../images/AdobeStock_200877704.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 133px;
+  }
+  
+  .three {
+    background-image: url(../images/AdobeStock_292777021.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    width: 200px;
+    height: 205px;
+  }
+  
+  .four {
+    background-image: url(../images/AdobeStock_304886685.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 140px;
+    height: 348px;
+  }
+  
+  .five {
+    display:none;
+  }
+  
+  .six {
+    display:none;
+  }
+
+  .about_content .item {
+    flex-direction: column;
+  }
+  
+  .seven {
+    display:none;
+  }
+
+.about_header_images .images_container {
+    display: flex;
+    justify-content: space-evenly;
+}
+}

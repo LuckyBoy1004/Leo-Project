@@ -1,0 +1,126 @@
+.contactPage_header {
+  position: relative;
+  height: 500px;
+  background-color: rgb(245, 192, 67);
+  margin-top: -220px;
+  padding-top: 240px;
+}
+
+.contactPage_header h1 {
+  font-family: "Roboto-Bold";
+  font-size: 46px;
+  color: white;
+  margin-block-end: 0px;
+}
+
+/* header ul li a {
+  color: white;
+}
+
+header ul li.active a {
+  color: black!important;
+}
+
+header ul li.active a:after {
+  background-color: black!important;
+  border-bottom: 1px solid black!important;
+} */
+
+.obliged {
+  margin-block-start: 0;
+    color: white;
+}
+
+.obliged p {
+  margin-block-start: 0;
+    color: white;
+}
+
+header.white {
+  background: linear-gradient(180deg, rgb(2 0 25 / 49%) 0%, rgb(255 255 255 / 0%) 100%);
+}
+
+.contactPage_header img {
+  position: absolute;
+  top:0;
+  left:0;
+  width: 130%;
+}
+
+.conctPage_body {
+  position: relative;
+    margin-bottom: 80px;
+}
+
+.contactPage_form_bloc {
+  max-width: 1000px;
+  margin: -130px auto 0;
+  background-color: #fdfdfd;
+  border-radius: 10px;
+  padding: 50px
+}
+
+.contactPage_form_bloc > p {
+    text-align: left;
+}
+
+.contactPage_form_bloc_bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin-top: 25px;
+}
+
+.contactPage_form_bloc_bottom > p {
+    text-align: left;
+    margin: 0;
+    max-width: 500px;
+    line-height: 23px;
+}
+
+.contactPage_form_bloc_bottom > button {
+    width: auto;
+}
+
+@media all and (max-width: 800px) {
+    .contactPage_form_bloc .formLine {
+      display: block;
+      margin-bottom: 0;
+    }
+
+    .contactPage_form_bloc_bottom>p {
+      text-align: center;
+    color: #898989;
+    }
+
+    .contactPage_header img {
+      display:none;
+    }
+
+    .contactPage_header {
+    margin-top: -210px;
+    padding-top: 240px;
+    }
+    
+    .contactPage_form_bloc .formField {
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .contactPage_form_bloc .formField label{
+      justify-content: center;
+    align-items: center;
+    }
+
+    .contactPage_form_bloc {
+        padding: 50px 20px;
+        border-radius:0px;
+    }
+    .contactPage_form_bloc_bottom {
+        display: block;
+    }
+    .contactPage_form_bloc_bottom > button {
+        margin-top: 30px;
+        width: 100%;
+    }
+  }

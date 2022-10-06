@@ -1,0 +1,644 @@
+* {
+  box-sizing: border-box;
+  font-family: "roboto-regular";
+}
+
+* {
+  outline: none;
+}
+
+@font-face {
+  font-family: "roboto-black";
+  font-style: normal;
+  src: local("Roboto-Black"),
+    url(./styles/font/Roboto-Black.ttf) format("truetype");
+}
+@font-face {
+  font-family: "roboto-regular";
+  font-style: normal;
+  src: local("Roboto-Regular"),
+    url(./styles/font/Roboto-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "roboto-bold";
+  font-style: normal;
+  src: local("Roboto-Bold"),
+    url(./styles/font/Roboto-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "roboto-light";
+  font-style: normal;
+  src: local("Roboto-Light"),
+    url(./styles/font/Roboto-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "roboto-medium";
+  font-style: normal;
+  src: local("Roboto-Medium"),
+    url(./styles/font/Roboto-Medium.ttf) format("truetype");
+}
+
+body {
+  max-width: 100%;
+  /* min-width: 400px; */
+}
+
+.App {
+  text-align: center;
+  background-color: rgb(253, 253, 253);
+  min-height: 100vh;
+  max-width: 100%;
+  /* overflow: hidden; */
+  position: relative;
+}
+
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+header.process {
+  padding-top: 17px;
+  display: block;
+}
+
+header.process > div {
+  justify-content: space-between;
+  display: flex;
+}
+
+header {
+  padding-top: 17px;
+  width: 100%;
+  display: flex;
+  padding-right: 5%;
+  padding-left: 5%;
+  z-index: 9;
+  padding-bottom: 17px;
+}
+
+header.mobile {
+  justify-content: space-between;
+  padding-right: 10%;
+  padding-left: 10%;
+}
+
+header.white {
+  background: linear-gradient(180deg, rgb(2 0 42 / 60%) 0%, rgba(255,255,255,0) 100%);
+}
+
+header.mobile.white {
+  background-color: rgb(253, 253, 253);
+}
+
+header.white.contact ul li.active a {
+  color: #222!important
+}
+
+header.white.contact ul li.active a::after {
+  background-color:#222!important;
+  border-bottom: none!important;
+}
+
+header ul {
+  list-style: none;
+  padding-left: 70px;
+}
+
+header.mobile ul {
+  list-style: none;
+  position: relative;
+    top: 96px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+header ul li {
+  position: relative;
+  display: inline-block;
+}
+
+header ul li a {
+  display: block;
+  position: relative;
+  margin: 10px 20px;
+  padding-bottom: 8px;
+  color: rgb(55, 55, 55);
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: color 0.3s cubic-bezier(0.11, 0.7, 0, 1);
+}
+
+header.mobile ul li a {
+  margin-left: 0;
+  font-size: 23px;
+  font-family: "Roboto-medium";
+  padding: 15px 0;
+}
+
+header.white ul li a {
+  color: white;
+}
+
+header.mobile.white ul li a {
+  color: rgb(43, 43, 43);
+}
+
+header ul li.active a {
+  color: rgb(245, 192, 67) !important;
+}
+
+header ul li.active a::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(245, 192, 67);
+  content: "";
+  border-bottom: 1px solid rgba(245, 192, 67);
+  transform: translate3d(0, 0, 0);
+}
+
+header ul li.active .subMenu a {
+  color: rgb(161, 161, 161);
+}
+
+/* header ul li.active .subMenu a:hover::after {
+} */
+
+header ul li.active .subMenu a::after {
+  background-color: transparent;
+  border-bottom: none;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 1px;
+  content: "";
+  transform: translate3d(-101%, 0, 0);
+  transition: transform 0.4s cubic-bezier(0.11, 0.7, 0, 1);
+}
+
+header ul li a::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(245, 192, 67);
+  content: "";
+  border-bottom: 1px solid rgba(245, 192, 67);
+  transform: translate3d(-101%, 0, 0);
+  transition: transform 0.4s cubic-bezier(0.11, 0.7, 0, 1);
+}
+
+header ul li a:hover::after {
+  transform: translate3d(0, 0, 0);
+}
+
+.fullWidth {
+  width: 100% !important;
+  min-width: inherit !important;
+  max-width: inherit !important;
+}
+
+.flex {
+  display: flex !important;
+}
+
+.largeButton {
+  color: white;
+  border: 3px solid transparent;
+  padding: 13px 45px;
+  border-radius: 10px;
+  width: 100%;
+  font-family: "roboto-medium";
+  font-size: 17px;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+
+.smallButtonhome {
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  border-radius: 5px;
+  padding: 8px 30px;
+  /* letter-spacing: 0.3px; */
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.4s;
+  font-size: 15px;
+}
+
+.smallButton {
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  border-radius: 5px;
+  padding: 9px 30px;
+  /* letter-spacing: 0.3px; */
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.4s;
+  font-size: 15px;
+}
+
+.smallButton {
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  border-radius: 5px;
+  padding: 9px 30px;
+  /* letter-spacing: 0.3px; */
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.4s;
+  font-size: 15px;
+}
+
+button.smallButton svg {
+  margin-right: 9px;
+}
+
+.largeRoundButton {
+  width: 100%;
+  padding: 14px;
+  color: white;
+  border: 3px solid transparent;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: "roboto-medium";
+  font-size: 18px;
+  max-width: 380px;
+}
+
+button.orange {
+  background-color: rgb(245, 192, 67);
+  border: 1px solid rgb(245, 192, 67);
+}
+
+button.green {
+  background-color: rgb(120, 213, 152);
+}
+
+button.white {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border: 1px solid rgb(206, 206, 206);
+}
+
+button.grey {
+  background-color: rgb(215, 211, 202);
+}
+
+button.blue {
+  background-color: rgb(27, 76, 239);
+}
+
+button.red {
+  background-color: rgb(255, 95, 95);
+}
+
+button.pink {
+  background-color: rgb(255, 159, 177);
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+button.pink:hover {
+  background-color: rgb(233, 136, 154);
+}
+
+button.blue:hover {
+  background-color: #163cb9;
+}
+
+button.green:hover {
+  background-color: rgb(96, 192, 130);
+}
+
+button.orange:hover {
+  background-color: #e6b031 !important;
+}
+
+button.white:hover {
+  background-color: #d8d8d8 !important;
+}
+
+button.grey:hover {
+  background-color: rgb(177, 174, 166)!important;
+}
+
+button.red:hover {
+  background-color: rgb(228, 84, 84);
+}
+
+button.grey:disabled:hover {
+  background-color: rgb(215, 211, 202) !important;
+}
+
+button.orange:disabled:hover {
+  background-color: rgb(231, 231, 231) !important;
+  border-color:rgb(231, 231, 231) !important;
+}
+
+button.grey:disabled {
+  opacity: 0.5;
+}
+
+button.orange:disabled {
+  background-color: rgb(231, 231, 231);
+  border-color:rgb(231, 231, 231) !important;
+}
+
+button.pink img {
+  margin-right: 10px;
+}
+/* 
+.pageTransition {
+  min-height: 760px;
+} */
+
+.pageTransition-enter {
+  opacity: 0;
+}
+
+.pageTransition-enter-active {
+  transition: opacity 200ms;
+  opacity: 1;
+}
+
+.pageTransition-exit {
+  opacity: 0;
+  position: absolute;
+  left: 15px;
+  right: 15px;
+}
+
+.pageTransition-exit-active {
+  opacity: 0;
+  transition: opacity 0ms;
+}
+
+.imgComponent {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.imgComponent.active {
+  opacity: 1;
+}
+
+/* .elementTransition {
+} */
+
+.elementTransition-enter {
+  opacity: 0;
+  height: 0;
+  margin: 0;
+}
+
+.elementTransition-enter-active {
+  transition: all 200ms;
+  margin: 18px 0;
+  height: 27px;
+  opacity: 1;
+}
+
+.elementTransition-exit {
+  margin: 18px 0;
+  height: 27px;
+  opacity: 1;
+}
+
+.elementTransition-exit-active {
+  margin: 0;
+  height: 0;
+  opacity: 0;
+  transition: all 200ms;
+}
+
+.customSelect select{
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: none;
+  border: 3px solid transparent;
+  background-color: rgba(233, 233, 233);
+  transition: all 0.3s;
+  padding: 10px 11px !important;
+
+  appearance: none;
+  margin: 0;
+
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  grid-template-areas: "select";
+}
+
+.customSelect select,
+.customSelect:after {
+  grid-area: select;
+}
+
+.customSelect select::-ms-expand {
+  display: none;
+}
+
+.customSelect::after {
+  content: "";
+  width: 0.8em;
+  height: 0.5em;
+  background-color: #f8c654;
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  justify-self: end;
+}
+.customSelect {
+  display: grid;
+  width: 100%;
+  min-width: 15ch;
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: rgba(233, 233, 233);
+  grid-template-areas: "select";
+  align-items: center;
+}
+
+.button {
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    font-family: "roboto-medium";
+    cursor: pointer;
+    transition: all ease .4s;
+    font-size: 15px;
+    padding: 13px 30px;
+}
+
+.blue_button {
+  background-color: #1b4cef;
+}
+
+.button:hover {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  background-color:#315ef3
+}
+
+.enable {
+display:block;
+}
+
+.disable {
+  display:none;
+}
+
+.dividerspace {
+width:100%;
+margin-top: 40px;
+height:1px;
+background-color:#C1C1C1;
+}
+
+.modifiedbutton {
+  align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    border-radius: 10px;
+    margin-right: 15px;
+    padding: 9px 30px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.4s;
+    font-size: 15px;
+}
+
+.customSelect select option {
+  width: 100%
+}
+
+.robotomedium {
+  font-family: "roboto-medium";
+}
+
+.robotobold {
+  font-family: "roboto-bold";
+}
+
+.fullScreenImg_container {
+  z-index: 9999;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.fullScreenImg_container img {
+  height: 80vh;
+  width: auto;
+  border-radius: 15px;
+}
+
+.fullScreenImg_container span {
+  position: absolute;
+  top:25px;
+  right: 25px;
+}
+
+.fullScreenImg_container svg {
+  font-size: 35px;
+  cursor: pointer;
+  fill: rgb(161, 161, 161);
+}
+
+.fullScreenImg_container svg:hover {
+  fill: rgb(255, 255, 255);
+}
+
+@media all and (max-width: 1100px) {
+
+  .largeButton {
+    color: #fff;
+    border: 3px solid transparent;
+    padding: 11px 30px;
+    border-radius: 10px;
+    width: 100%;
+    font-family: "roboto-medium";
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color .4s;
+}
+
+}
+
+path {
+  fill : rgb(245, 192,67)
+}

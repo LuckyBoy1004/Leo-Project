@@ -1,0 +1,58 @@
+{
+  "name": "run-db",
+  "version": "1.0.32",
+  "description": "A local database that indexes jig states from RUN transactions",
+  "keywords": [
+    "run",
+    "run-sdk",
+    "database",
+    "indexer",
+    "jig",
+    "jigs",
+    "berry",
+    "berries",
+    "token",
+    "tokens",
+    "smart contract",
+    "smart contracts",
+    "bitcoin",
+    "bsv",
+    "bitcoin sv"
+  ],
+  "license": "MIT",
+  "repository": "git://github.com/runonbitcoin/run-db.git",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "standard --fix",
+    "start": "node --experimental-worker .",
+    "retryTx": "node --experimental-worker src/retry-tx.js",
+    "test": "node --experimental-worker node_modules/mocha/bin/mocha",
+    "test:cover": "nyc -r=text -r=lcovonly -x=test/** node --experimental-worker node_modules/mocha/bin/mocha",
+    "bump": "npm version patch && git push --follow-tags && npm publish"
+  },
+  "dependencies": {
+    "abort-controller": "^3.0.0",
+    "axios": "^0.21.1",
+    "better-sqlite3": "^7.4.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "event-stream": "^4.0.1",
+    "eventsource": "^1.1.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.1",
+    "reconnecting-eventsource": "^1.1.0",
+    "run-sdk": "^0.6.35"
+  },
+  "optionalDependencies": {
+    "zeromq": "^5.2.8"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^8.3.2",
+    "nyc": "^15.1.0",
+    "standard": "^16.0.3"
+  }
+}

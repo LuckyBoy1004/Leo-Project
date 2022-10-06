@@ -1,0 +1,62 @@
+.layoutContainer {
+  margin: 50px auto 30px;
+  max-width: 100%;
+  padding: 0 5%;
+}
+
+h1.bigTitle {
+  font-size: 50px;
+  margin: 0 0 15px 0;
+  line-height: 53px;
+  text-align: left;
+}
+
+h2.bigTitle {
+  font-size: 28px;
+  margin: 0 0 15px 0;
+  text-align: left;
+}
+
+
+p.normalSubTitle {
+  margin: 0;
+}
+
+p.bigSubTitle {
+  margin: 0;
+  font-size: 18px;
+}
+
+.divider {
+  margin: 25px 0;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  height: 2px;
+  background: #e7e7e7;
+  padding: 0!important;
+  scroll-behavior:smooth;
+}
+
+.divider.small {
+    width: 40%;
+    margin: 25px auto;
+}
+
+@media all and (max-width: 800px) {
+
+  h1.bigTitle {
+    font-size: 25px;
+    line-height:unset;
+    text-align: center;
+  }
+
+  h2.bigTitle {
+    text-align:center;
+  }
+
+  p.bigSubTitle {
+    text-align: left;
+  }
+
+}

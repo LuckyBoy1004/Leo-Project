@@ -1,0 +1,8 @@
+.github
+test
+.env
+.nyc_output
+coverage
+run.db*
+*.sqlite3
+.idea

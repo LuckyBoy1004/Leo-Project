@@ -1,0 +1,1122 @@
+.dashboard {
+  margin-top: 50px;
+}
+
+.dashboardHeader {
+  display: block;
+  text-align: left;
+  padding: 0 5%;
+}
+
+.dashboardHeader div {
+  display: flex;
+  justify-content: space-between;
+  max-width: 430px;
+}
+
+p.green {
+  color: #78D598;
+  font-family: Roboto-medium;
+}
+
+.dashboardHeader div span {
+  font-family: "roboto-medium";
+  cursor: pointer;
+
+  display: block;
+  position: relative;
+  color: rgb(161, 161, 161);
+  font-size: 16px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: color 0.3s cubic-bezier(0.11, 0.7, 0, 1);
+}
+
+.dashboardHeader div span::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(245, 192, 67);
+  content: "";
+  border-bottom: 1px solid rgba(245, 192, 67);
+  transform: translate3d(-101%, 0, 0);
+  transition: transform 0.4s cubic-bezier(0.11, 0.7, 0, 1);
+}
+
+.dashboardHeader div span.active {
+  color: rgb(245, 192, 67);
+}
+
+.dashboardHeader div span:hover::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(245, 192, 67);
+  content: "";
+  border-bottom: 1px solid rgba(245, 192, 67);
+  transform: translate3d(0, 0, 0);
+}
+
+.dashboardHeader div span.active::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(245, 192, 67);
+  content: "";
+  border-bottom: 1px solid rgba(245, 192, 67);
+  transform: translate3d(0, 0, 0);
+}
+
+.dashboardHeader div span:hover {
+  color: rgb(245, 192, 67);
+}
+
+.dashboardHeader p {
+  font-size: 18px;
+}
+
+.dashboardHeader p span {
+  font-family: "roboto-medium";
+  font-size: 22px;
+  text-transform: capitalize;
+}
+
+.dashboardHeader h1 {
+  color: rgba(245, 192, 67);
+  font-size: 40px;
+  font-family: "roboto-bold";
+  margin-block-end: 0.4em;
+  text-transform: capitalize;
+  margin: 0 20px 0 0;
+}
+
+.dashboardHeader button {
+  background-color: rgb(215, 211, 202);
+  color: white;
+  border-radius: 5px;
+  font-family: "roboto-medium";
+  padding: 9px 12px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  align-self: center;
+}
+
+.dashboardHeader button:hover {
+  background-color: #bdbab2;
+}
+
+.dashboardContent {
+  margin: 16px auto 0;
+  max-width: 100%;
+  padding: 0 5%;
+}
+
+.leftSide {
+  min-width: 850px;
+  flex-grow: 3;
+  text-align: left;
+  margin: 0 0 35px;
+}
+
+.rightSide {
+  overflow: hidden;
+  flex-grow: 3;
+  text-align: left;
+  margin: 0 0 35px;
+}
+
+.dashboardInfoContent {
+  background-color: rgba(244, 244, 244);
+  border-radius: 10px;
+  padding: 25px;
+  max-height: 450px;
+  min-height: 450px;
+}
+
+.leftSide h1,
+.rightSide h1 {
+  font-family: "roboto-bold";
+  margin: 0;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+.leftSide h2 {
+  font-family: "roboto-regular";
+  margin: 0;
+}
+
+.progressBarEvent {
+  min-width: 300px;
+}
+
+.dashboardInfo {
+  position: relative;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.dashboardInfo .insetLeftSide {
+  min-width: 460px;
+  margin-right: 50px;
+}
+
+.dashboardInfo .insetRightSide {
+  position: relative;
+  overflow: hidden;
+  min-width: 100%;
+}
+
+.headerDashboardInset {
+  color: #191919;
+  margin: 10px 0 16px;
+  text-align: left;
+}
+
+.headerDashboardInset h2 {
+  display: inline-block;
+  margin: 0;
+  font-size: 30px;
+  font-family: "roboto-bold";
+}
+
+.headerDashboardInset p {
+  display: inline-block;
+  font-weight: 600;
+  margin: 0 0 0 10px;
+  font-size: 17px;
+}
+
+.headerDashboardInset span {
+  display: block;
+  margin: 10px 0 20px;
+  font-size: 18px;
+  font-family: "roboto-regular";
+  color: grey;
+}
+
+.dashboardInfo .item {
+  margin-bottom: 10px;
+}
+
+.dashboardInfo .item label {
+  font-family: "roboto-medium";
+  font-size: 25px;
+}
+
+.dashboardInfo .item p {
+  margin: 0;
+  font-size: 20px;
+}
+
+.dashboardInfo .item p span {
+  font-family: "roboto-bold";
+}
+
+.coloredText1 {
+  color: rgb(82, 96, 205);
+}
+
+.coloredText2 {
+  color: rgb(191, 53, 108);
+}
+
+.item button:hover {
+  background-color: #bdbab2;
+}
+
+.blogContainer {
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.articleContainer {
+  margin-right: 30px;
+  margin-bottom: 30px;
+  max-width: 522px;
+  min-width: 200px;
+}
+
+.articleContainer:last-child {
+  margin-right: 0;
+}
+
+.articleImg img {
+  max-width: 270px;
+}
+
+.articleContent {
+  padding: 25px;
+    border: 2px solid #bfbfbf;
+    border-radius: 8px;
+}
+
+.articleContent .imageContainer {
+  border-radius: 15px;
+  margin-bottom:10px;
+  max-height: 200px;
+  overflow: hidden;
+}
+
+.articleContent .imageContainer img {
+  width: 100%;
+}
+
+.articleContent span {
+  color: rgb(167, 167, 167);
+  font-family: "roboto-bold";
+}
+
+.articleContent h3 {
+  margin: 0;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.articleContent p:nth-of-type(1n) {
+  margin-top: 10px;
+  text-align:left;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.articleContent p:nth-of-type(2n) {
+  margin: 20px 0 0;
+}
+
+.buttonDuoDashboard {
+  min-width: 240px;
+  position: relative;
+  display: flex;
+  margin-top: 20px;
+}
+
+.buttonDuoDashboard button:disabled {
+  opacity: 0.5;
+}
+
+.bottomPriceLeft {
+  float: left;
+}
+
+.bottomPriceLeft p {
+  font-size: 23px;
+  font-family: "roboto-bold";
+}
+
+.bottomPriceLeft p span {
+  font-size: 23px;
+  font-family: "roboto-bold";
+  color: rgb(0, 196, 0);
+}
+
+.bottomPriceLeft button {
+  background-color: rgba(245, 192, 67);
+}
+
+.bottomPriceRight {
+  float: right;
+}
+
+.bottomPriceRight p {
+  font-size: 23px;
+  font-family: "roboto-bold";
+}
+
+.bottomPriceRight span {
+  float: right;
+  margin-top: 0;
+  font-size: 14px;
+  color: rgb(156, 156, 156);
+}
+
+.noEventDisplayDashboard {
+  text-align: center;
+  margin: 35px 0;
+}
+
+.noEventDisplayDashboard h2 {
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+.noEventDisplayDashboard.mobile h2 {
+  font-size: 28px !important;
+  margin-bottom: 0px !important;
+  font-family: "roboto-bold" !important;
+}
+
+.noEventDisplayDashboard.mobile p {
+  padding: 0px 40px;
+}
+
+.noEventDisplayDashboard img {
+  width: 60px;
+}
+
+.noEventDisplayDashboard.mobile img {
+  width: 60px;
+  margin: 15px 0;
+}
+
+.noEventDisplayDashboard button {
+  display: inline-block;
+  border-radius: 20px;
+  background-color: rgba(245, 192, 67);
+  font-size: 15px;
+  padding: 10px 35px;
+  margin-top:10px;
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.noEventDisplayDashboard button:hover {
+  background-color: #e6b031;
+}
+
+.noEventDisplayDashboard a:hover {
+  text-decoration: none !important;
+  color: white !important;
+  background-color: rgb(235, 184, 65);
+}
+
+.noEventDisplayDashboard.mobile a {
+  display: block;
+  margin: 0 30px;
+  padding: 15px;
+  border-radius: 30px;
+  font-size: 19px;
+}
+
+.dashboard.mobile {
+  margin: 0 0px;
+  overflow: visible;
+}
+
+.dashboard.mobile .leftSide h1 {
+}
+
+.dashboard.mobile .leftSide {
+  max-width: 100%;
+  min-width: 100%;
+  overflow: visible;
+  margin: 0;
+}
+
+.dashboard.mobile .dashboardInfo {
+  flex-direction: column;
+  height: auto;
+  background-color: transparent;
+  padding: 10px 0;
+}
+
+.dashboard.mobile .headerDashboardInset h2 {
+  line-height: 30px;
+  margin: 0 !important;
+  font-size: 23px !important;
+}
+
+.dashboard.mobile .insetRightSide {
+  overflow: visible;
+}
+.dashboard.mobile .dashboardContent {
+  overflow: hidden;
+}
+
+.dashboardContent.mobile {
+  overflow: visible !important;
+}
+
+.dashboardContent.mobile .insetLeftSide {
+  overflow: visible !important;
+  min-width: inherit;
+}
+
+.dashboard.mobile .itemPrestataireDashboard {
+  border-radius: 20px;
+}
+
+.dashboard.mobile .leftSide h2 {
+  font-size: 22px;
+}
+
+.insetLeftSide.mobile .item {
+  margin-bottom: 15px;
+}
+
+.insetLeftSide.mobile .item.buttonContainer {
+  text-align: center;
+}
+
+.dashboard.mobile .item.buttonContainer button {
+  width: 100%;
+  display: block;
+  padding: 17px;
+  font-size: 17px;
+  border-radius: 5px;
+  font-family: "roboto-regular";
+  max-width: 600px;
+  margin: 20px auto 0;
+}
+
+.dashboard.mobile .headerDashboardInset {
+  margin-bottom: 15px;
+}
+
+.dashboard.mobile .separator {
+  background-color: rgb(231, 231, 231);
+  width: 100%;
+  height: 2px;
+  margin: 10px 0;
+}
+
+.dashboardBottomPrice.mobile .bottomPriceLeft,
+.dashboardBottomPrice.mobile .bottomPriceRight {
+  text-align: center;
+  float: none;
+}
+
+.dashboardBottomPrice.mobile .bottomPriceLeft button {
+  display: block;
+  width: 100%;
+  padding: 17px;
+  margin: 0 0 20px;
+  font-size: 17px;
+  border-radius: 5px;
+}
+
+.dashboardBottomPrice .bottomPriceLeft button {
+  transition: all 0.2s;
+}
+
+.dashboardBottomPrice .bottomPriceLeft button:hover {
+  background-color: #e6b031;
+}
+
+.dashboard.mobile .progress {
+  margin: 0;
+}
+
+.dashboard.mobile .dashboardHeader {
+  margin: 50px 0 0 0;
+}
+
+.dashboard.mobile .dashboardHeader button {
+  width: 100%;
+  display: block;
+  padding: 17px;
+  font-size: 17px;
+  border-radius: 5px;
+  font-family: "roboto-regular";
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.emailNotVerifiedMessage {
+  padding: 30px;
+  background-color: rgb(227, 245, 255);
+  margin: 20px 0;
+}
+
+.emailNotVerifiedMessage p {
+  margin: 0;
+  font-size: 17px;
+}
+
+.emailNotVerifiedMessage button {
+  background-color: rgb(27, 76, 239);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 0;
+  font-family: "roboto-medium";
+  margin: 5px 0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.emailNotVerifiedMessage .formLine {
+  max-width: 500px;
+  margin: 20px auto 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.emailNotVerifiedMessage .formField {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.emailNotVerifiedMessage .formField input {
+  background-color: white;
+}
+
+.emailNotVerifiedMessage button.submit {
+  width: auto;
+  padding: 10px 30px;
+  margin: 20px auto 0;
+}
+
+.emailNotVerifiedMessage h2 {
+  margin-top: 0;
+}
+
+.backUpdateEmail {
+  cursor: pointer;
+  color: black;
+  transition: color 0.2s;
+  margin-top: 20px !important;
+}
+
+.backUpdateEmail:hover {
+  cursor: pointer;
+  color: rgba(245, 192, 67);
+}
+
+.loadingSpinner.button {
+  margin: 0 auto;
+}
+
+.bottomEmailNotVerified {
+  margin: 15px 0 0;
+}
+
+.bottomEmailNotVerified button:nth-of-type(1n) {
+  margin-right: 15px;
+}
+
+.bottomEmailNotVerified p {
+  margin-bottom: 5px;
+}
+
+.opacityTransition-enter {
+  opacity: 0;
+}
+.opacityTransition-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+.opacityTransition-exit {
+  opacity: 1;
+}
+.opacityTransition-exit-active {
+  opacity: 0;
+  transition: opacity 0s;
+}
+
+.fromLeftTransition-enter {
+  opacity: 0;
+  transform: translateX(-100px);
+}
+.fromLeftTransition-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 300ms;
+}
+.fromLeftTransition-exit {
+  opacity: 0;
+  transform: translateX(0px);
+  display: none;
+}
+.fromLeftTransition-exit-active {
+  opacity: 0;
+  transform: translateX(0px);
+  transition: all 0ms;
+}
+
+.emailNotVerifiedMessage button:hover {
+  background-color: #1d3fb1;
+}
+
+.dashboard.mobile .dashboardHeader {
+  display: block;
+}
+
+.containerBudgetHeader {
+  margin-top: 25px;
+  display: flex;
+}
+
+.containerBudgetHeader .progress {
+  height: 6px !important;
+  margin: 0 25px !important;
+  background-color: #e0e0e0 !important;
+}
+
+.containerBudgetHeader .progressBarEvent {
+  padding-top: 13px;
+}
+
+.dashboard.mobile .dashboardInfo .insetLeftSide {
+  margin-right: 0;
+}
+
+.dashboard.mobile .containerBudgetHeader {
+  display: block;
+}
+
+.dashboard.mobile .containerBudgetHeader .progress {
+  margin: 0 !important;
+}
+
+.dashboard.mobile .containerBudgetHeader button {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  padding: 17px;
+  font-size: 17px;
+  margin: 20px auto 0;
+}
+
+.interrestingSellersContainer {
+  margin-top: 35px;
+}
+
+.interrestingSellers {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.interrestingSellers .item {
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  /* width: 300px; */
+  /* height: 220px; */
+  margin-right: 35px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.interrestingSellers .item img {
+  width: 100%;
+}
+
+.interrestingSellers .item:last-child {
+  margin-right: 0;
+}
+
+.bottomImageAbsolute {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: white;
+  padding-left: 15px;
+}
+
+.bottomImageAbsolute p {
+  margin: 0;
+}
+
+.interrestingSellers .item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 60%,
+    rgba(0, 0, 0, 0.753) 100%
+  );
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.bottomImageAbsolute p:nth-of-type(1) {
+  font-family: "roboto-medium";
+  font-size: 17px;
+  line-height: 17px;
+}
+
+.buttonArticle {
+  text-decoration: underline;
+  margin: 0;
+  font-size: 17px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.buttonDuoDashboard.mobile {
+  display: block;
+}
+
+.buttonDuoDashboard.mobileLight {
+  display: flex;
+}
+
+.buttonDuoDashboard.mobileLight button {
+  display: block;
+  width: 100%;
+  padding: 17px;
+  margin: 0 0 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+.buttonDuoDashboard.mobileLight button:nth-of-type(1) {
+  margin-right: 15px;
+}
+
+.updateProfilContent {
+  margin: 25px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dashboardUpdate .formField,
+.dashboardUpdate .formFieldSpecialDate {
+  margin: 0;
+  display: block;
+  min-width: 350px;
+  max-width: 350px;
+  margin-right: 25px;
+  margin-bottom: 25px;
+}
+
+.dashboardUpdate.mobile .formField {
+  margin: 0;
+  display: block;
+  min-width: 100%;
+  max-width: 100%;
+  margin-right: 25px;
+  margin-bottom: 25px;
+}
+
+.updateProfilConfirm {
+  margin: 0 0 25px;
+}
+
+.dashboardUpdate {
+  margin: 16px auto 0;
+  max-width: 100%;
+  padding: 0 5%;
+}
+
+.updateProfilConfirm .formField {
+  margin-bottom: 0;
+  display: inline-block;
+}
+
+.updateProfilConfirm button {
+  padding: 16px 30px;
+}
+
+.dashboardUpdate.mobile .updateProfilConfirm button {
+  width: 100%;
+}
+
+.updateProfilInfoBox p span {
+  color: rgb(245, 192, 67);
+  cursor: pointer;
+  font-family: "roboto-medium";
+  text-decoration: underline;
+}
+
+.updateProfilContent .formField input:disabled {
+  background-color: rgb(209, 209, 209);
+}
+
+.dashboardUpdate .errorMessage {
+  padding: 0;
+  margin: 0;
+}
+
+.dashboardUpdate .formFieldSpecialDate.error .etape1DatePicker {
+  border: 3px solid rgb(250, 0, 0);
+}
+
+.dashboardUpdate.mobile .formFieldSpecialDate {
+  max-width: 100%;
+  margin-right: 0;
+}
+
+.dashboardUpdate .loadingSpinner {
+  margin: 200px auto;
+}
+
+.GiveReview_container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stars_container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: left;
+  margin-bottom: 10px;
+}
+
+.stars_container svg {
+  width: 30px;
+  height: 30px;
+  color: rgb(215, 215, 215);
+  cursor: pointer;
+}
+
+.stars_container svg:hover {
+  color: rgb(247, 192, 66);
+}
+
+.stars_container svg.active {
+  color: rgb(247, 192, 66);
+}
+
+.stars_container svg:hover ~ svg {
+  color: rgb(247, 192, 66);
+}
+
+.GiveReview__item {
+  text-align: left;
+  border: 1px solid rgb(204, 204, 204);
+  padding: 25px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+}
+
+.GiveReview__item h2 {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-top: 0;
+  font-family: Roboto-medium;
+}
+
+.GiveReview__item .formField {
+  display: block;
+  margin: 0 0 10px 0;
+}
+
+.buttonSendForm {
+  text-align: right
+}
+
+.buttonSendForm button.disabled {
+  background-color: rgb(202, 202, 202);
+  cursor:auto;
+}
+
+.buttonSendForm button.disabled:hover {
+  background-color: rgb(202, 202, 202);
+}
+
+.linkRedirect {
+  cursor: pointer;
+  font-family: roboto-medium;
+  transition: color 0.1s;
+}
+
+.linkRedirect:hover {
+  color: rgb(245, 192, 67);
+}
+
+.noContent {
+  text-align: center;
+  font-family: Roboto-medium;
+  margin: 50px 0;
+  width: 100%;
+}
+
+.wishlist__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 243px;
+  max-width: 243px;
+  margin-right: 20px;
+}
+
+.wishlist__item_top.clickable {
+  cursor: pointer;
+}
+
+.wishlist__item_top.clickable:hover{
+  border: 6px solid rgb(245, 192, 67)
+}
+
+.wishlist__item_top {
+  position: relative;
+  min-width: 242px;
+  max-width: 242px;
+  max-height: 340.2px;
+  min-height: 340.2px;
+  border-radius: 15px;
+  border: 3px solid rgb(255, 159, 177);
+  overflow: hidden;
+  transition: all .1s;
+}
+
+.wishlist__item_top .wishlist__item_top_img {
+  height: 100%;
+}
+
+.wishlist__item_top .wishlist__item_top_img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 60%,
+    rgba(0, 0, 0, 0.553) 100%
+  );
+}
+
+.wishlist__item_top .wishlist__item_top_img img {
+  height: 100%;
+}
+
+.wishlist__item_bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.wishlist__item_details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 10px;
+}
+
+.wishlist__item_details p {
+  margin: 0;
+  color: white;
+  font-family: "roboto-medium";
+  font-size: 15px;
+  line-height: 17px;
+  padding-left: 15px;
+}
+
+.wishlist__item_details p:nth-child(2) {
+  font-size: 14px;
+  margin-top: 3px;
+  font-family: "roboto-regular";
+}
+
+.heartContainer {
+  position: absolute;
+  top:-10px;
+  right:-10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color:rgb(255, 159, 177);
+  width: 25px;
+  height: 25px;
+  z-index: 999;
+}
+
+.heartContainer img {
+  width: 15px;
+}
+
+.wishlist_content {
+  display: flex;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.dashboardWishlist .loadingSpinner {
+  margin: 200px auto
+}
+
+@media all and (max-width: 900px) {
+  .wishlist_content {
+    justify-content: space-around;
+  }
+
+  .dashboardInfoContent {
+    background-color: rgba(244, 244, 244);
+    border-radius: 10px;
+    padding: 25px;
+    max-height: unset;
+    min-height: unset;
+  }
+
+  .dashboardInfo .item label {
+    font-size:18px;
+  }
+
+  .dashboardInfo .item p {
+    font-size: 18px;
+  }
+
+  .dashboardHeader div {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: normal;
+    margin-bottom: 20px;
+  }
+
+  .dashboardHeader div span {
+    font-size: 20px;
+    margin: 10px 0px;
+  }
+
+  .wishlist__item {
+    margin-bottom: 30px;
+  }
+
+  .headerDashboardInset {
+    color: #191919;
+    margin: 10px 0 16px;
+    text-align: center;
+  }
+
+  .noEventDisplayDashboard {
+    text-align: center;
+    margin: 100px 0;
+  }
+
+  .articleContent h3 {
+    text-align:left;
+  }
+
+  .articleContent .imageContainer {
+    margin-bottom:10px;
+  }
+
+  .articleContent p:nth-of-type(1n) {
+    margin-top:10px;
+    text-align: left;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+}

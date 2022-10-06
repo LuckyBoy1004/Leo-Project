@@ -1,0 +1,304 @@
+.panelContainer {
+  text-align: left;
+}
+
+.panelMenu {
+  min-width: 300px;
+  max-width: 300px;
+  position: fixed;
+  height: 100%;
+  background-color: rgb(41, 41, 41);
+  color: white;
+  z-index: 9999;
+}
+
+.panelContent {
+  margin-left: 300px;
+  padding: 100px 40px 40px;
+  background-color: rgb(236, 236, 236);
+  min-height: 100vh;
+}
+
+.panelContent table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.panelContent table th {
+  padding: 20px;
+  background-color: rgb(95, 162, 207);
+  color: white;
+}
+
+.panelContent table td {
+  padding: 20px;
+}
+
+.panelContent table {
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.panelMenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.panelMenu ul li {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.panelMenu ul li:hover {
+  background-color: rgb(87, 87, 87);
+}
+
+.panelMenu ul li.active {
+  background-color: rgb(95, 162, 207);
+}
+
+.panelMenu .panelLogoContainer {
+  padding: 30px 0;
+  text-align: center;
+}
+
+.panelMenu .panelLogoContainer img {
+  width: 110px;
+  filter: invert(1);
+}
+
+.panelTopMenu {
+  min-height: 60px;
+  max-height: 60px;
+  position: fixed;
+  width: 100%;
+  background-color: rgb(65, 65, 65);
+  color: white;
+  z-index: 9998;
+}
+
+.showSellerContainer {
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.showSellerContainer h2 {
+  
+}
+
+.showSellerContainer img {
+  width: 150px;
+}
+
+.showSellerContainer ul {
+  margin: 0;
+  padding: 0;
+}
+
+.showSellerContainer ul li {
+  list-style: none;
+  padding: 10px 0 0;
+  font-size: 17px;
+}
+
+.showSellerContainer ul li label {
+    font-family: "roboto-medium";
+}
+
+.headerShowSellerContainer {
+  display: flex;
+}
+
+.headerShowSellerContainer div {
+  width: 100%;
+  text-align: center;
+  background-color: rgb(245, 245, 245);
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.headerShowSellerContainer div.active {
+  background-color: rgb(255, 255, 255);
+}
+
+.headerShowSellerContainer div h3 {
+  margin: 0;
+}
+
+.infoShowSellerContainer,
+.servicesShowSellerContainer,
+.showServiceContainer {
+  padding: 20px 30px;
+}
+
+.showServiceContainer button.buttonBackList {
+  margin-bottom: 15px;
+}
+
+.infoEditSellerContainer .placeInputContainer img {
+  display: none;
+}
+
+.infoEditSellerContainer form {
+  padding: 25px;
+}
+
+.buttonAdminTransparent {
+  color: blue;
+  background-color: transparent;
+  padding: 10px 20px;
+  border: 1px solid rgb(197, 197, 197);
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.buttonAdminTransparent:hover {
+  background-color: rgba(1, 1, 1, 0.1);
+}
+
+.buttonAdminValid {
+  color: white;
+  background-color: green;
+  padding: 10px 20px;
+  border: 1px solid rgb(197, 197, 197);
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.buttonAdminInfo {
+  color: white;
+  background-color: rgb(49, 49, 155);
+  padding: 10px 20px;
+  border: 1px solid rgb(197, 197, 197);
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.buttonAdminDelete {
+  color: white;
+  background-color: red;
+  padding: 10px 20px;
+  border: 1px solid rgb(197, 197, 197);
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.createSellerContainer {
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.infoEditSellerContainer textarea {
+    width: 100%;
+padding: 13px 10px;
+border-radius: 10px;
+box-shadow: none;
+border: 3px solid transparent;
+background-color: rgba(233, 233, 233);
+transition: all 0.3s;
+min-height: 200px;
+}
+
+.infoEditSellerContainer textarea:focus {
+    background-color: white;
+border: 3px solid rgba(245, 192, 67);
+border-radius: 10px;
+}
+
+.infoShowServiceImages {
+  display: flex;
+}
+
+.infoShowServiceImages img {
+  margin-right: 25px;
+}
+
+.documentsContainer {
+  padding: 20px 30px 
+}
+
+.documentsContainer h2 {
+  text-transform: capitalize;
+}
+
+.documentsContainer img {
+  width: 250px;
+}
+
+.documentsContainer .buttonsContainer {
+  padding: 15px 0
+}
+
+.documentsContainer button {
+  margin-right: 25px;
+}
+
+.documentsContainer a {
+  position: relative;
+  display: block;
+  width:250px;
+}
+
+.documentsContainer a span {
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  top:0;
+  right:0;
+  font-family: "roboto-medium";
+}
+
+.documentsContainer a span.green {
+ background-color: green;
+}
+
+.documentsContainer a span.red {
+  background-color: red;
+ }
+
+ .documentsContainer a span.yellow {
+   background-color: #d7d728;
+  }
+
+  p.validMessage {
+    color: rgb(23, 185, 23);
+    font-size: 18px;
+    font-family: "roboto-medium";
+    padding: 15px 0;
+    display: flex;
+  }
+
+  .showSellerContainer p.errorMessage {
+    padding: 15px 0 0
+  }
+
+  td.validatedStatus,
+  td.pendingStatus,
+  td.subscribingStatus {
+    font-family: "roboto-medium";
+  }
+
+
+  td.validatedStatus {
+    color: green
+  }
+
+  td.pendingStatus {
+    color: white;
+    background-color: #e8e85d;
+  }
+  
+  td.subscribingStatus {
+    color: red;
+  }
+
+  .statusSeller {
+    font-family: "roboto-bold";
+  }
