@@ -118,7 +118,6 @@ const Prest_Dashboard_Sponsorship = () => {
         var before_days = new Date(date._d.getFullYear() , date._d.getUTCMonth() , 0).getDate()
         var div_array = [];
         let number = (start_day+7)%7;
-        console.log(number)
         for (let i = number; i > 0; i--) {
             div_array.push({time: 'before', day: before_days-i, state: 'grey', check: false})
         }

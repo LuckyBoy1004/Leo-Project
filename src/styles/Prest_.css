@@ -2005,10 +2005,11 @@ p.blueLink {
   background-color: white;
   border-radius: 10px;
   padding: 20px;
-  width: 400px;
+  width: 470px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .prest_Dashboard_Info .actionFormContainer button {

@@ -19,6 +19,7 @@ const Prest_Dashboard_Commandes = () => {
 
     const {
         seller,
+        insertHoliday,
         getSalesOfSellerIdFromDB,
         formateToDateWithWords,
         formateToDate,
@@ -31,7 +32,8 @@ const Prest_Dashboard_Commandes = () => {
     const [openedEvent, setOpenedEvent] = useState("")
     const [sales, setSales] = useState([]);
     const [noteObj, setNoteObj] = useState({ saleID: 0, message: "" });
-    const [isModalOpened, setIsModalOpened] = useState(false);
+    const [rejectModal, setRejectModal] = useState(false);
+    const [validatedModal, setValidatedModal] = useState(false);
     const [currentKey, setCurrentKey] = useState();
 
     const [filterStatus, setFilterStatus] = useState("");
@@ -53,24 +55,41 @@ const Prest_Dashboard_Commandes = () => {
     }
 
     async function handleActionSale(key, status) {
+        setCurrentKey(key)
         if (status === "rejected") {
-            setIsModalOpened(true)
-            setCurrentKey(key)
+            rejectModalYesNoReturn(key)
             return
-        }
-        else {
-            let sale = sales.filter(sale => sale.id === key)
-            sale[0].status = status
-            let newSales = sales.filter(sale => sale.id !== key)
-            newSales = [...newSales, sale[0]]
-            await updateSaleStatusInDB(sale[0].id, sale[0].sellerID, status)
-            return setSales(newSales)
+        }else if (status === "validated") {
+            setValidatedModal(true)
+            return
         }
 
     }
 
-    async function handleModalYesNoReturn(val) {
-        setIsModalOpened(false)
+    async function validatedModalYesNoReturn(val) {
+        setValidatedModal(false)
+        if (val == "no") {
+            let sale = sales.filter(sale => sale.id === currentKey)
+            sale[0].status = "validated"
+            let newSales = sales.filter(sale => sale.id !== currentKey)
+            newSales = [...newSales, sale[0]]
+            await updateSaleStatusInDB(sale[0].id, sale[0].sellerID, "validated")
+            return setSales(newSales)    
+        }else if (val == "yes") {
+            let sale = sales.filter(sale => sale.id === currentKey)
+            sale[0].status = "validated"
+            let newSales = sales.filter(sale => sale.id !== currentKey)
+            newSales = [...newSales, sale[0]]
+            await updateSaleStatusInDB(sale[0].id, sale[0].sellerID, "validated")
+            var date = new Date(sale[0].date)
+            var holiday = date.getFullYear() + '.' + (date.getMonth()+1) + '.' +date.getDate();
+            await insertHoliday(sale[0].sellerID, holiday)
+            return setSales(newSales)    
+        }
+    }
+
+    async function rejectModalYesNoReturn(val) {
+        setRejectModal(false)
         if (val === "no") return
 
         let sale = sales.filter(sale => sale.id === currentKey)
@@ -314,16 +333,28 @@ const Prest_Dashboard_Commandes = () => {
 
                                     </div>
                                     <CSSTransition
-                                        in={isModalOpened}
+                                        in={validatedModal}
                                         timeout={200}
                                         classNames="pageTransition"
                                         unmountOnExit
                                     >
                                         <ModalYesNo
-                                            callback={(val) => handleModalYesNoReturn(val)}
-                                            value="L'annulation d'une commande est irréversible."
+                                            callback={(val) => validatedModalYesNoReturn(val)}
+                                            value="Voulez-vous accepter d'autres réservations?"
+                                            value2="En acceptant, vous pourrez recevoir d'autres réservations, sinon votre calendrier sera fermée le jour de la réservations et ne pourra en accepter d'autres"
                                         />
                                     </CSSTransition>
+                                    {/* <CSSTransition
+                                        in={rejectModal}
+                                        timeout={200}
+                                        classNames="pageTransition"
+                                        unmountOnExit
+                                    >
+                                        <ModalYesNo
+                                            callback={(val) => rejectModalYesNoReturn(val)}
+                                            value="L'annulation d'une commande est irréversible."
+                                        />
+                                    </CSSTransition> */}
                                 </div>
                             )}
                     </section>
