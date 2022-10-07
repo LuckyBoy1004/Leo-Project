@@ -112,7 +112,7 @@ const Prest_Subscribe = () => {
             setButtonLoading(false);
           } else
             setTimeout(() => {
-              history.push("/mon-compte-partenaire");
+              history.push("/mon-compte-partenaire/process/description");
             }, 2000);
         });
       }

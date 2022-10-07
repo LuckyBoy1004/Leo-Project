@@ -177,7 +177,7 @@ const Etape2 = (props) => {
                 const eventTime = new Date(event.date);
                 var eventDay = eventTime.getFullYear() + '.' + (eventTime.getMonth()+1) + '.' +eventTime.getDate();
                 setSellers(newSellers.filter(seller => seller.holiday.filter(holiday => holiday == eventDay).length == 0))
-                setCategorySellers(categorySellersClose)
+                setCategorySellers(newSellers.filter(seller => seller.subcategory === subCategory && seller.holiday.filter(holiday => holiday == eventDay).length == 0))
                 // On enlève les sellers à moins de 5 kilometres, pour ne garder dans allSellers uniquement ceux à plus de 5. Pour envoyer à la map
                 const copyAllSellers = [...filteredResults].filter(item => item.subcategory === subCategory)
                 const newAllSellers = copyAllSellers.filter((item) => !newSellers.includes(item));

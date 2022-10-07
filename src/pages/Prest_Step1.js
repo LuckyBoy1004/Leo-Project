@@ -63,10 +63,10 @@ const Prest_Step1 = () => {
 
   useEffect(() => {
     setSellerDetails({
-      description: seller.description,
-      category: seller.category,
-      subcategory: seller.subcategory,
-      image_path: seller.image_path,
+      description: seller.description ? seller.description : '',
+      category: seller.category ? seller.category : '',
+      subcategory: seller.subcategory ? seller.subcategory : '',
+      image_path: seller.image_path ? seller.image_path : '',
     });
     return setIsMounted(true);
   }, []);

@@ -16,7 +16,7 @@ const Prest_Dashboard = () => {
     const { seller } = useAuth()
     const history = useHistory()
     console.log(useAuth())
-    seller.status === "subscribing" && history.push('/mon-compte-partenaire/process/abonnement')
+    seller.status === "subscribing" && history.push('/mon-compte-partenaire/process/description')
     
     const [windowsWidth, setWindowsWidth] = useState(window.innerWidth)
     const [step, setStep] = useState(seller.status === "opened" ? "1" : "0")
