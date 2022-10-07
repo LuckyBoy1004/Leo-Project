@@ -446,6 +446,18 @@ export const UserProvider = ({ children }) => {
     return true;
   }
 
+  async function insertHoliday(id, holi) {
+    refSellers
+    .doc(id)
+    .update({
+      holiday: firebase.firestore.FieldValue.arrayUnion(holi)
+    })
+    .catch((error) => {
+      return console.log(error);
+    });
+    return true;
+  }
+
   async function deleteHoliday(id, year, month) {
 
     const selectMonth = await refSellers.doc(id).get();
@@ -1586,6 +1598,7 @@ export const UserProvider = ({ children }) => {
         subscribe,
         sellerSubscribe,
         saveHoliday,
+        insertHoliday,
         logout,
         user,
         seller,
