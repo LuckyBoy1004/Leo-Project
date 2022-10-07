@@ -1,0 +1,31 @@
+{
+    "sales": [
+        {
+            "eventID": "id",
+            "sellerID": "sellerID",
+            "userID": "",
+            "choosedServices": [
+                {"id": "serviceid", "quantity": 2},
+                {"id": "serviceid", "quantity": 1}
+            ],
+            "paid": 450,
+            "date": "12 nov 2020",
+            "status": "pending/validated/rejected/passed",
+            "transactionID": ""
+        }
+    ],
+    "views": [
+        {"date": "12 nov 2020", "ip": "ip"},
+        {"date": "12 nov 2020", "ip": "ip"}
+    ],
+    "reviews": [
+        {
+            "date": "12 nov 2020",
+            "eventDate": "12 nov 2020",
+            "comment": "comment",
+            "eventID": "id",
+            "userName": "Robert",
+            "note": 4
+        }
+    ]
+}
